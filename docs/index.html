@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Exam‑Excel by Naidel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      background: #0f1115;
+      color: #e5e7eb;
+    }
+    header {
+      background: #020617;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: #aab3c5;
+    }
+    nav {
+      background: #020617;
+      padding: 0.6rem 1rem;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      border-bottom: 1px solid #1e293b;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2.8rem auto;
+      padding: 0 1.6rem;
+    }
+    h2 {
+      border-left: 4px solid #6c5ce7;
+      padding-left: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 1.4rem;
+      margin: 1rem 0;
+    }
+    .card ul {
+      margin: 0.3rem 0 0 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      border-top: 1px solid #1e293b;
+      background: #020617;
+    }
+    .btn {
+      display: inline-block;
+      background: #6c5ce7;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1.2rem;
+    }
+    .btn:hover {
+      background: #5847db;
+    }
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #111827;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Exam‑Excel</h1>
+<p>
+  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
+  <img src="https://img.shields.io/badge/Platform-Microsoft%20Excel-green">
+  <img src="https://img.shields.io/badge/Language-VBA-blueviolet">
+</p>
+  <p>Sistema de entrenamiento para exámenes en Microsoft Excel</p>
+  <a class="btn" href="#download">Descargar</a>
+</header>
+
+<nav>
+  <a href="#about">¿Qué es?</a>
+  <a href="#features">Características</a>
+  <a href="#workflow">Funcionamiento</a>
+  <a href="#structure">Estructura</a>
+  <a href="#license">Licencia</a>
+  <a href="#donar">❤️ Apoyar</a>
+</nav>
+
+<section id="about">
+  <h2>¿Qué es Exam‑Excel?</h2>
+  <div class="card">
+    <p><strong>Exam‑Excel</strong> es un sistema de entrenamiento y autoevaluación para exámenes tipo test,
+       desarrollado íntegramente en <strong>Microsoft Excel con VBA</strong>.</p>
+
+    <p>Permite practicar preguntas, simular exámenes reales, analizar resultados y reforzar el estudio
+       mediante retroalimentación inmediata y estadísticas.</p>
+
+    <p>Está pensado para certificaciones, oposiciones y estudio técnico, priorizando la reutilización,
+       la flexibilidad y la transparencia del código.</p>
+  </div>
+</section>
+
+<section id="features">
+  <h2>Características principales</h2>
+
+  <div class="card"><strong>✅ Entrenamiento interactivo</strong>: preguntas tipo test con feedback inmediato.</div>
+  <div class="card"><strong>✅ Aleatoriedad</strong>: selección de preguntas y orden de respuestas variables.</div>
+  <div class="card"><strong>✅ Estadísticas</strong>: aciertos, fallos y porcentaje de sesión.</div>
+  <div class="card"><strong>✅ Historial por pregunta</strong>: seguimiento de rendimiento individual.</div>
+  <div class="card"><strong>✅ Revisión</strong>: prioridad automática de preguntas marcadas.</div>
+  <div class="card"><strong>✅ Glosario</strong>: siglas y términos técnicos documentados.</div>
+  <div class="card"><strong>✅ Gráficos</strong>: soporte para figuras e imágenes referenciadas.</div>
+</section>
+
+<section id="workflow">
+  <h2>Funcionamiento básico</h2>
+  <div class="card">
+    <ul>
+      <li>Iniciar una sesión desde la hoja <code>Principal</code></li>
+      <li>Leer la pregunta en la hoja <code>Pregunta</code></li>
+      <li>Responder con <strong>doble clic</strong> sobre la opción deseada</li>
+      <li>Consultar la retroalimentación</li>
+      <li>Continuar con la siguiente pregunta</li>
+    </ul>
+  </div>
+</section>
+
+<section id="structure">
+  <h2>Estructura del archivo Excel</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Principal</strong>: inicio de sesión y configuración</li>
+      <li><strong>Pregunta</strong>: interfaz principal del examen</li>
+      <li><strong>BD</strong>: base de datos de preguntas</li>
+      <li><strong>Sesion</strong>: estado interno del examen (oculta)</li>
+      <li><strong>Glosario</strong>: términos técnicos</li>
+      <li><strong>Gráficos</strong>: figuras y esquemas</li>
+    </ul>
+  </div>
+</section>
+
+<section id="license">
+  <h2>Licencia</h2>
+  <div class="card">
+    <p>Exam‑Excel es <strong>software libre</strong>, distribuido bajo la licencia
+       <strong>GNU General Public License v3 (GPLv3)</strong>.</p>
+
+    <p>Puedes usarlo, estudiarlo, modificarlo y redistribuirlo respetando los términos de la licencia.</p>
+
+    <p>Este software se distribuye <strong>SIN NINGUNA GARANTÍA</strong>,
+       ni siquiera la implícita de adecuación para un propósito particular.</p>
+  </div>
+</section>
+
+<section id="donar">
+  <h2>❤️ Apoya el proyecto</h2>
+  <div class="card">
+    <p>Exam‑Excel es software libre. Si te resulta útil, puedes apoyar su desarrollo
+       con una donación voluntaria.</p>
+
+    <p>
+      <a href="https://paypal.me/atmarquez"
+         target="_blank"
+         rel="noopener noreferrer">❤️ Donar con PayPal</a>
+    </p>
+  </div>
+</section>
+
+<section id="download">
+  <h2>Descarga</h2>
+  <p>El proyecto está disponible en GitHub.</p>
+  <a class="btn" href="https://github.com/atmarquez/exam-excel" target="_blank">
+    Ver repositorio en GitHub
+  </a>
+</section>
+
+<footer>
+  <p>© 2024–2026 Antonio Teodomiro Márquez Muñoz (Naidel)</p>
+  <p>
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">
+      Texto completo de la GPLv3
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
