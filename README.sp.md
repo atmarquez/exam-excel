@@ -23,6 +23,29 @@ Exam‑Excel permite practicar preguntas tipo test, simular exámenes reales, re
 - ✅ Soporte para figuras y gráficos referenciados
 - ✅ Glosario de siglas y términos técnicos
 - ✅ Interfaz completamente funcional en Excel
+- ✅ Sistema de temporizadores persistente entre sesiones  
+- ✅ Modos manual y automático de temporización  
+- ✅ Comportamiento inteligente de los relojes  
+- ✅ Pausa automática al responder en modo automático  
+- ✅ Reanudación coherente sin pérdida de contexto temporal 
+
+---
+
+## 🆕 Novedades (v1.1.0)
+
+- ⏱️ Persistencia de temporizadores entre sesiones:
+  - Se guarda automáticamente el tiempo total del examen
+  - Se conserva el tiempo de cada pregunta
+- 🔁 Reanudación de sesiones con recuperación exacta del tiempo
+- ⚙️ Modo de temporización Automático / Manual controlado desde la interfaz
+  - Selección desde la hoja "Principal"
+- ⏸️ Comportamiento automático:
+  - El reloj se detiene al responder en modo automático
+- ▶️ Lógica inteligente de reanudación:
+  - El reloj solo arranca si la pregunta no está respondida
+- 💾 Guardado automático del estado al cerrar Excel
+- 🛡️ Mejora de robustez:
+  - Protección frente a valores de tiempo inválidos o corruptos
 
 ---
 
@@ -34,6 +57,11 @@ Exam‑Excel permite practicar preguntas tipo test, simular exámenes reales, re
 4. Leer la pregunta en la hoja **Pregunta**
 5. **Responder haciendo doble clic** sobre la opción deseada
 6. Consultar la retroalimentación y continuar con la siguiente pregunta
+
+El modo de temporización puede configurarse como "Manual" o "Automático" desde la hoja Principal.
+En modo automático:
+- El reloj se detiene automáticamente al responder
+- El reloj se reanuda al avanzar a la siguiente pregunta
 
 ---
 
@@ -113,6 +141,22 @@ El sistema incorpora varias capas de aleatoriedad:
 - Respeto de filtros definidos por el usuario
 
 Esto evita la memorización mecánica y mejora el aprendizaje real.
+
+---
+
+## ⚙️ Sistema de temporización
+
+La aplicación incorpora un sistema de doble temporizador:
+
+- Temporizador de sesión → tiempo total del examen
+- Temporizador de pregunta → tiempo por pregunta
+
+Características:
+- Persistencia automática entre sesiones
+- Modos de operación manual y automático
+- Gestión inteligente del inicio y pausa
+
+El estado del tiempo se conserva incluso al cerrar el archivo.
 
 ---
 

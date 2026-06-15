@@ -23,6 +23,29 @@ Exam‑Excel allows users to practice multiple‑choice questions, simulate real
 - ✅ Support for figures and referenced graphics
 - ✅ Glossary for technical terms and acronyms
 - ✅ Fully functional Excel‑based interface
+- ✅ Persistent timer system across sessions  
+- ✅ Automatic / Manual timer modes  
+- ✅ Smart timer behavior based on user interaction  
+- ✅ Automatic pause on answer (automatic mode)  
+- ✅ Resume session without losing timing context  
+
+---
+
+## 🆕 What's New (v1.1.0)
+
+- ⏱️ Persistent timers across sessions:
+  - Total exam time is saved automatically
+  - Question time is preserved between sessions
+- 🔁 Resume session with accurate time recovery
+- ⚙️ Automatic/manual timer mode controlled via UI
+  - Mode selection is now handled from the "Principal" sheet
+- ⏸️ Automatic pause behavior:
+  - Timers stop automatically when answering in automatic mode
+- ▶️ Smart resume logic:
+  - Timers only start if the current question has not been answered
+- 💾 Automatic state saving when closing Excel
+- 🛡️ Improved robustness:
+  - Protection against invalid or corrupted time values
 
 ---
 
@@ -34,6 +57,9 @@ Exam‑Excel allows users to practice multiple‑choice questions, simulate real
 4. Read the question on the **Pregunta** sheet
 5. **Answer by double‑clicking** on the desired option
 6. Review the feedback and continue with the next question
+
+You can switch between Manual and Automatic timer modes from the Principal sheet.
+In Automatic mode, the timer pauses automatically after answering a question and resumes on the next one.
 
 ---
 
@@ -113,6 +139,22 @@ The system applies multiple layers of randomization:
 - Respect for user‑defined filters
 
 This avoids memorization patterns and improves effective learning.
+
+---
+
+## ⚙️ Timer System
+
+The application includes a dual timer system:
+
+- Session Timer → tracks total exam time
+- Question Timer → tracks time per question
+
+Timers support:
+- Automatic persistence across sessions
+- Manual and automatic operation modes
+- Intelligent start/stop behavior based on user actions
+
+The timer state is preserved even when the file is closed.
 
 ---
 
