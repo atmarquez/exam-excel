@@ -7,6 +7,42 @@ and this project adheres to Semantic Versioning.
 
 ---
 
+## [1.1.1] - 2026-07
+
+### ✨ Added
+- Consulta rápida de respuestas mediante clic simple una vez respondida la pregunta.
+- Visualización inmediata de la retroalimentación de cualquier respuesta sin modificar la respuesta contabilizada.
+- Indicador visual persistente de la respuesta seleccionada por el usuario mediante un marco de resaltado dedicado.
+- Posibilidad de revisar todas las retroalimentaciones de una pregunta antes de avanzar a la siguiente.
+
+---
+
+### 🔄 Changed
+- Mejora del flujo de revisión de respuestas tras responder una pregunta.
+- Sustitución del sistema de resaltado mediante bordes de celda por un indicador visual independiente basado en Shape.
+- El indicador de respuesta seleccionada ahora cubre toda la fila de la respuesta (columnas B:M).
+- Revisión de la lógica de limpieza visual al iniciar una nueva pregunta y al comenzar una nueva sesión.
+
+---
+
+### 🛠 Fixed
+- Corregido un problema que eliminaba los bordes originales de las respuestas al utilizar la consulta rápida de retroalimentación.
+- Corregido un problema visual que provocaba la aparición de distintos tonos de borde azul al resaltar respuestas.
+- Corregido un problema por el que el color de una respuesta consultada desaparecía al navegar entre respuestas mediante clic simple.
+- Corregido un problema que impedía identificar claramente la respuesta seleccionada por el usuario tras consultar otras respuestas.
+- Corregido el reseteo incorrecto de los contadores de sesión al iniciar un nuevo examen: Los contadores se reinician ahora correctamente en las celdas P5:P8.
+- Corregida la limpieza del indicador de respuesta seleccionada al comenzar una nueva sesión.
+- Corregida la limpieza del indicador de respuesta seleccionada al avanzar a la siguiente pregunta.
+
+---
+
+### 💡 Usability Improvements
+- La revisión posterior de respuestas es ahora más rápida e intuitiva.
+- Se mantiene claramente diferenciada la respuesta contabilizada frente a las respuestas simplemente consultadas.
+- Mayor consistencia visual entre preguntas, sesiones y navegación por retroalimentaciones.
+
+---
+
 ## [1.1.0] - 2026-06
 
 ### ✨ Added
